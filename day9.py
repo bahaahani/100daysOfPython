@@ -60,8 +60,8 @@ travel_log = {
 
 travel_log = {
     "France": {
-        "Cities_Visited": ["Berlin", "hamburger", "stuttgart"],
-        "Total_visits": 5,
+        "cities_Visited": ["Berlin", "hamburger", "stuttgart"],
+        "total_visits": 5,
     },
 }
 
@@ -81,8 +81,8 @@ travel_log = [
 
 travel_log = [
     {
-        "Country": "France",
-        "Cities_visited": ["paris", "Lilly", "Django"],
+        "country": "France",
+        "cities_visited": ["paris", "Lilly", "Django"],
         "total_visits":12,
     },
     {
@@ -92,4 +92,44 @@ travel_log = [
     },
 ]
 
+
 # Silent Auction Program
+logo = '''
+                         ___________
+                         \         /
+                          )_______(
+                          |"""""""|_.-._,.---------.,_.-._
+                          |       | | |               | | ''-.
+                          |       |_| |_             _| |_..-'
+                          |_______| '-' `'---------'` '-'
+                          )"""""""(
+                         /_________\\
+                       .-------------.
+                      /_______________\\
+'''
+
+print(logo)
+isContinue = True
+bid_dictionary = {
+    "name": 0,
+}
+
+
+def find_highest_bidder(bids_dictionary):
+    maxbid = 0
+    for person in bid_dictionary:
+        if bid_dictionary[person] > maxBid:
+            maxBid = bid_dictionary[person]
+    print(f"the highest bidder is {maxBid}")
+
+
+while isContinue:
+    name = input("Enter your name")
+    bid_dictionary[name] = input("Input your bid")
+
+    result = input(
+        "Do you want to add more bids Say 'yes' to continue or 'No' to exit")
+    if result == "no":
+        break
+find_highest_bidder(bids_dictionary=bid_dictionary)
+print(bid_dictionary)
