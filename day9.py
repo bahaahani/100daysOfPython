@@ -110,26 +110,27 @@ logo = '''
 
 print(logo)
 isContinue = True
-bid_dictionary = {
-    "name": 0,
-}
+bid_dictionary = {}
 
 
 def find_highest_bidder(bids_dictionary):
-    maxbid = 0
-    for person in bid_dictionary:
-        if bid_dictionary[person] > maxBid:
-            maxBid = bid_dictionary[person]
-    print(f"the highest bidder is {maxBid}")
+    highest_bid = 0
+    winner = ""
+    for person in bids_dictionary:
+        bid_amount = bids_dictionary[person]
+        if bid_amount > highest_bid:
+            highest_bid = bid_amount
+            winner = person
+    print(f"the winner is {winner} with highest bid of {highest_bid}")
 
 
 while isContinue:
     name = input("Enter your name")
-    bid_dictionary[name] = input("Input your bid")
+    bid_dictionary[name] = int(input("Input your bid"))
 
     result = input(
         "Do you want to add more bids Say 'yes' to continue or 'No' to exit")
     if result == "no":
         break
-find_highest_bidder(bids_dictionary=bid_dictionary)
+find_highest_bidder(bid_dictionary)
 print(bid_dictionary)
