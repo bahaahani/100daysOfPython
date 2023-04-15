@@ -28,13 +28,13 @@ def game():
     print("I'm thinking of a number between 1 and 100.")
     answer = randint(1, 100)
     turns = set_difficulty()
-    print(f"you have {turns} attempts remaining to guess the number.")
     print(f"Pssst, the correct answer is {answer}")
     guess = 0
     while guess != answer:
         print("Make a guess: ")
         guess = int(input())        
         turns = check_answer(guess, answer, turns)
+        print(f"you have {turns} attempts remaining to guess the number.")
         if turns == 0:
             print("You've run out of guesses, you lose.")
             break
