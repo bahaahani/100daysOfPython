@@ -25,8 +25,6 @@ tim = Turtle()
 #     tim.home()
 #     tim.pendown()
 
-
-
 # screen.onkey(key="w", fun=move_forwards)
 # screen.onkey(key="s", fun=move_backwards)
 # screen.onkey(key="a", fun=turn_left)
