@@ -59,18 +59,21 @@ def random_color():
 #     timmy.circle(100)
 #     timmy.setheading(timmy.heading()+5)
     
-#challenge 5 
-def draw_spirograph(size_of_gap):
-    for _ in range(int(360/size_of_gap)):
-        timmy.color(random_color())
-        timmy.circle(100)
-        timmy.setheading(timmy.heading()+size_of_gap)
+# #challenge 5 
+# def draw_spirograph(size_of_gap):
+#     for _ in range(int(360/size_of_gap)):
+#         timmy.color(random_color())
+#         timmy.circle(100)
+#         timmy.setheading(timmy.heading()+size_of_gap)
 
-draw_spirograph(5)
-
-
+# draw_spirograph(5)
 
 
+
+import colorgram
+
+colorss = colorgram.extract("image.jpg", 30)
+print(colorss)
 
 
 
