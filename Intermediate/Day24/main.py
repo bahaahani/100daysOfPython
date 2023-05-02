@@ -1,11 +1,19 @@
 # TODO: Create a letter using starting_letter.txt
-import os
-
-cwd = os.getcwd()
-print(cwd)
-with open("./Input/Letters/starting_letter.txt") as names:
+PLACEHOLDER = '[name]'
+with open("./Input/Names/invited_names.txt") as names:
     names_list = names.readlines()
     print(names_list)
+
+with open("./Input/Letters/starting_letter.txt") as letters:
+    letter_contents = letters.read()
+    for name in names_list:
+        stripped_name = name.strip()
+        new_letter = letter_contents.replace(PLACEHOLDER, stripped_name)
+        with open(f"./Output/ReadyToSend/letter_for_{stripped_name}.txt", mode='w') as completed_letter:
+            completed_letter.write(new_letter)
+
+
+
 # with open("Input/Letters/starting_letter.txt") as letter:
 #     contents = letter.read()
 #     print(contents)
