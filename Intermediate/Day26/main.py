@@ -33,6 +33,8 @@ passed_students = {
 print(passed_students)
 
 
+
+
 numbers = [1, 1, 2, 3, 4, 4, 5, 5, 5]
 # squared_numbers = [new_items for items in list]
 squared_numbers = [num*num for num in numbers]
