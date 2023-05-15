@@ -63,7 +63,7 @@ emale_entry = Entry(width=35)
 emale_entry.insert(0,"Blainefire00@gmail.com")
 emale_entry.grid(row=2,column=1, columnspan=2)
 pwd_entry = Entry(width=35)
-pwd_entry.grid(row=3,column=1, columnspan=2)#hmm
+pwd_entry.grid(row=3,column=1, columnspan=2)#hmm2
 
 
 generatepwd= Button(text="Generate", command=generate_password)
