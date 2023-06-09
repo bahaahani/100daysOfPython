@@ -5,7 +5,7 @@ students_Scores = {
     "Bahaa": 99,
     "Muneera": 100,
     "Sara": 98,
-    "Ahmed": 77,
+    "Ahmed": 100,
     "Ali": 46,
     "Hussain": 85,
     "Hussam": 64,
